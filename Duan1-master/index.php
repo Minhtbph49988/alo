@@ -45,24 +45,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             //     include "view/about-us.php";
             //     break;
 
-        case 'sanphamct':
-            if (isset($_POST['guibinhluan'])) {
-                extract($_POST);
-                insert_binhluan($id_sanpham, $noidung);
-            }
-            if (isset($_GET['id_sanpham']) && ($_GET['id_sanpham'] > 0)) {
-                $id_sanpham = $_GET['id_sanpham'];
-                $onesp = loadone_sanpham($id_sanpham);
-                extract($onesp);
-                $binhluan = loadall_binhluan($_GET['id_sanpham']);
-                $sp_tt = loadall_sanpham_mausac_view($id_sanpham);
-                $mausac_in_sanpham = load_mausac_in_sanpham($id_sanpham);
-                $danhmuc = check_danhmuc($id_sanpham);
-                $name_dm = $danhmuc['ten'];
-                $iddm = $danhmuc['id'];
-                $hinhanh = hinhanh_sanpham($id_sanpham);
-                $splq = cac_sp_lienquan($iddm, $id_sanpham);
-            }
+    
             //them vào giỏ hàng
             if (isset($_POST['themgiohang'])) {
                 extract($_POST);
