@@ -26,27 +26,7 @@
               <div class="form-group col-md-3">
                 <label for="exampleSelect1" class="control-label">Danh mục</label>
                 <select class="form-control" id="exampleSelect1" name="iddm">
-                  <?php foreach($listdanhmuc as $danhmuc): ?>
-                    <option value="<?=$danhmuc['id']?>" <?=$danhmuc['id']==$iddm?"selected":""?>>
-                        <?=$danhmuc['ten']?>
-                    </option>
-                  <?php endforeach ?>
-                </select>
-              </div>
-              <div class="form-group  col-md-3">
-                <label class="control-label">Xuất xứ</label>
-                <input class="form-control" type="text" name="xuatxu" value="<?=$xuatxu??""?>" >
-              </div>
-              <div class="form-group col-md-3">
-                <label class="control-label">Phong cách</label>
-                <input class="form-control" type="text" name="phongcach" value="<?=$phongcach??""?>" >
-              </div>
-              <div class="form-group col-md-12">
-                <label class="control-label">Ảnh sản phẩm</label>
-                <div id="myfileupload">
-                  <input type="file" id="uploadfile" name="hinh"/>
-                </div>
-              </div>
+                 
               <div class="form-group col-md-12">
                 <label class="control-label">Mô tả sản phẩm</label>
                 <textarea class="form-control" name="mota" id="mota"><?=$mota?></textarea>
